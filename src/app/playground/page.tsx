@@ -40,22 +40,16 @@ export default function PlaygroundPage() {
       <header className="sticky top-0 z-30 border-b border-slate-200/80 dark:border-sky-500/20 bg-white/90 dark:bg-[#070e24]/90 px-4 py-3 backdrop-blur-md">
         <div className="mx-auto flex max-w-4xl items-center justify-between">
           <div className="flex items-center gap-3">
-            {/* Tombol Back Utama */}
+            {/* Tombol Back Sederhana (Panah Saja) */}
             <Link
               href="/shipments"
-              className="inline-flex items-center gap-2 rounded-xl border border-slate-200 dark:border-sky-500/30 bg-white dark:bg-[#070f26] px-3.5 py-1.5 text-xs font-bold text-slate-700 dark:text-sky-300 shadow-2xs hover:border-sky-400 hover:bg-sky-50 dark:hover:bg-sky-500 dark:hover:text-slate-950 transition-all cursor-pointer"
+              title="Kembali"
+              aria-label="Kembali"
+              className="inline-flex items-center justify-center w-9 h-9 rounded-xl border border-slate-200 dark:border-sky-500/30 bg-white dark:bg-[#070f26] text-slate-700 dark:text-sky-300 shadow-2xs hover:border-sky-400 hover:bg-sky-50 dark:hover:bg-sky-500 dark:hover:text-slate-950 transition-all cursor-pointer"
             >
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
-              <span>Kembali ke Control Tower</span>
-            </Link>
-
-            <Link
-              href="/"
-              className="hidden sm:inline-flex text-xs font-semibold text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-sky-400 transition-colors"
-            >
-              Beranda Publik
             </Link>
           </div>
 
@@ -199,23 +193,28 @@ export default function PlaygroundPage() {
           </div>
         </Section>
 
-        {/* Footer Tombol Back Bawah */}
-        <div className="pt-8 border-t border-slate-200 dark:border-sky-500/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+        {/* Footer Tombol Back Bawah (Ikon Sederhana) */}
+        <div className="pt-8 border-t border-slate-200 dark:border-sky-500/20 flex items-center justify-between">
           <Link
             href="/shipments"
-            className="inline-flex items-center gap-2 rounded-xl bg-slate-900 dark:bg-sky-500 text-white dark:text-slate-950 px-5 py-2.5 text-xs font-bold hover:brightness-110 shadow-sm transition-all"
+            title="Kembali ke Control Tower"
+            aria-label="Kembali ke Control Tower"
+            className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-slate-900 dark:bg-sky-500 text-white dark:text-slate-950 hover:brightness-110 shadow-sm transition-all"
           >
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
-            <span>Kembali ke Control Tower</span>
           </Link>
 
           <Link
             href="/"
-            className="text-xs font-semibold text-blue-600 dark:text-sky-400 hover:underline"
+            title="Beranda Publik"
+            aria-label="Beranda Publik"
+            className="inline-flex items-center justify-center w-10 h-10 rounded-xl border border-slate-200 dark:border-sky-500/30 bg-white dark:bg-[#070f26] text-slate-700 dark:text-sky-300 hover:border-sky-400 hover:bg-sky-50 dark:hover:bg-sky-500 dark:hover:text-slate-950 transition-all"
           >
-            ← Kembali ke Beranda Publik NusaCargo
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
           </Link>
         </div>
       </main>

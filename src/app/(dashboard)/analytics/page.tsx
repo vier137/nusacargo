@@ -90,9 +90,13 @@ export default async function AnalyticsPage({ searchParams }: AnalyticsPageProps
           {isDemoError ? (
             <Link
               href="/analytics"
-              className="rounded-lg bg-slate-900 dark:bg-sky-500 px-3.5 py-1.5 text-xs font-bold text-white dark:text-slate-950 hover:brightness-110 transition-colors"
+              title="Tutup Mode Simulasi"
+              aria-label="Tutup Mode Simulasi"
+              className="flex h-9 w-9 items-center justify-center rounded-xl bg-rose-600 text-white hover:bg-rose-500 transition-colors shadow-2xs"
             >
-              ← Kembali ke Mode Normal
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
             </Link>
           ) : (
             <Link

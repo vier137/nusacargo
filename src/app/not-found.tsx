@@ -16,15 +16,17 @@ export default function NotFound() {
       <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
         <Link
           href="/"
-          className="rounded-xl bg-blue-600 dark:bg-sky-500 px-5 py-2.5 text-xs font-bold text-white dark:text-slate-950 hover:brightness-110 shadow-sm transition-all"
+          className="inline-flex items-center gap-1.5 rounded-xl bg-blue-600 dark:bg-sky-500 px-4 py-2.5 text-xs font-bold text-white dark:text-slate-950 hover:brightness-110 shadow-sm transition-all"
         >
-          Kembali ke Beranda & Lacak Ulang
+          <span>←</span>
+          <span>Beranda</span>
         </Link>
         <Link
           href="/shipments"
-          className="rounded-xl border border-slate-300 dark:border-sky-500/30 bg-white dark:bg-[#0a142e] px-5 py-2.5 text-xs font-semibold text-slate-700 dark:text-sky-300 hover:bg-slate-50 dark:hover:bg-sky-950/60 transition-colors"
+          className="inline-flex items-center gap-1.5 rounded-xl border border-slate-300 dark:border-sky-500/30 bg-white dark:bg-[#0a142e] px-4 py-2.5 text-xs font-semibold text-slate-700 dark:text-sky-300 hover:bg-slate-50 dark:hover:bg-sky-950/60 transition-colors"
         >
-          Buka Control Tower
+          <span>Control Tower</span>
+          <span>→</span>
         </Link>
       </div>
     </div>

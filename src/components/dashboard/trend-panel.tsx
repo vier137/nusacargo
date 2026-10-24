@@ -49,13 +49,14 @@ export function TrendPanelView({ trend }: { trend: Trend }) {
 
       {/* Bar Chart Sederhana & Responsif dengan Tailwind */}
       <div className="space-y-3">
-        <div className="grid grid-cols-7 sm:grid-cols-14 gap-2 items-end h-48 pt-6 px-1">
-          {trend.points.map((pt, idx) => {
-            const isHigh = pt.ontimeRate >= 90;
-            const isMedium = pt.ontimeRate >= 80 && pt.ontimeRate < 90;
+        <div className="overflow-x-auto pb-2 -mx-2 px-2 scrollbar-none">
+          <div className="flex items-end gap-2 h-48 pt-6 px-1 min-w-[480px] sm:min-w-0 sm:grid sm:grid-cols-14">
+            {trend.points.map((pt, idx) => {
+              const isHigh = pt.ontimeRate >= 90;
+              const isMedium = pt.ontimeRate >= 80 && pt.ontimeRate < 90;
 
-            return (
-              <div key={idx} className="flex flex-col items-center h-full justify-end group relative">
+              return (
+                <div key={idx} className="flex-1 min-w-[26px] sm:min-w-0 flex flex-col items-center h-full justify-end group relative">
                 {/* Floating Tooltip */}
                 <div className="absolute -top-7 opacity-0 group-hover:opacity-100 transition-all pointer-events-none z-20 whitespace-nowrap rounded bg-slate-900 dark:bg-sky-500 px-1.5 py-0.5 text-[10px] font-mono font-bold text-white dark:text-slate-950 shadow-sm">
                   {pt.ontimeRate}%
@@ -79,6 +80,7 @@ export function TrendPanelView({ trend }: { trend: Trend }) {
               </div>
             );
           })}
+          </div>
         </div>
 
         {/* Legend & Target SLA */}

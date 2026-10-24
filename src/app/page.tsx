@@ -40,9 +40,10 @@ export default function Home() {
 
             <Link
               href="/shipments"
-              className="flex items-center gap-1.5 rounded-xl bg-slate-950 dark:bg-sky-500 text-white dark:text-slate-950 px-4 py-2 text-xs font-bold shadow-md hover:scale-[1.02] active:scale-95 transition-all dark:shadow-[0_0_20px_rgba(56,189,248,0.4)]"
+              className="flex items-center gap-1.5 rounded-xl bg-slate-950 dark:bg-sky-500 text-white dark:text-slate-950 px-3 sm:px-4 py-2 text-xs font-bold shadow-md hover:scale-[1.02] active:scale-95 transition-all dark:shadow-[0_0_20px_rgba(56,189,248,0.4)]"
             >
-              <span>Control Tower</span>
+              <span className="hidden sm:inline">Control Tower</span>
+              <span className="sm:hidden">Tower</span>
               <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>

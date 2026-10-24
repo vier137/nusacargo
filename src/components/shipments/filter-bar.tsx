@@ -88,15 +88,15 @@ export function ShipmentFilterBar() {
         )}
       </div>
 
-      {/* Filter Kategori Status */}
-      <div className="flex flex-wrap items-center gap-1.5 pt-2 border-t border-slate-100 dark:border-sky-500/10">
-        <span className="text-xs text-slate-500 dark:text-sky-400/70 mr-1 font-mono text-[11px]">
+      {/* Filter Kategori Status: Scroll Horisontal di Mobile & Rapi di Desktop */}
+      <div className="flex items-center gap-1.5 pt-2 border-t border-slate-100 dark:border-sky-500/10 overflow-x-auto pb-1 scrollbar-none -mx-1 px-1">
+        <span className="shrink-0 text-xs text-slate-500 dark:text-sky-400/70 mr-1 font-mono text-[11px]">
           STATUS:
         </span>
         <button
           type="button"
           onClick={() => handleStatusChange("all")}
-          className={`rounded-full px-3 py-1 text-xs font-semibold transition-all cursor-pointer ${
+          className={`shrink-0 rounded-full px-3 py-1 text-xs font-semibold transition-all cursor-pointer ${
             currentStatus === "all"
               ? "bg-slate-900 text-white dark:bg-sky-500 dark:text-slate-950 dark:shadow-[0_0_10px_rgba(56,189,248,0.4)]"
               : "bg-slate-100 text-slate-600 dark:bg-[#0c1a3f] dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-[#122452]"
@@ -111,7 +111,7 @@ export function ShipmentFilterBar() {
               key={status}
               type="button"
               onClick={() => handleStatusChange(status)}
-              className={`rounded-full px-3 py-1 text-xs font-semibold capitalize transition-all cursor-pointer ${
+              className={`shrink-0 rounded-full px-3 py-1 text-xs font-semibold capitalize transition-all cursor-pointer ${
                 isSelected
                   ? "bg-blue-600 text-white dark:bg-sky-500 dark:text-slate-950 dark:shadow-[0_0_10px_rgba(56,189,248,0.4)]"
                   : "bg-slate-100 text-slate-600 dark:bg-[#0c1a3f] dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-[#122452]"
